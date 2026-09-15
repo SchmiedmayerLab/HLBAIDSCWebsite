@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Stanford Medicine artwork copyright Stanford University. -->
-<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" role="img" aria-labelledby="title description">
-  <title id="title">Heart, Lung, and Blood AI Data Science Center</title>
-  <desc id="description">Heart, Lung, and Blood AI Data Science Center icon</desc>
-  <rect width="80" height="80" rx="14.399999999999999" fill="#ffffff"/>
-  <svg x="20.4" y="9.6" width="39.2" height="47.91111111111112" viewBox="18 18 36 44" overflow="hidden">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Stanford_Medicine"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="18 18 152 44"
+	 style="enable-background:new 18 18 152 44;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#53565A;}
 	.st1{fill:#C7C7C7;}
@@ -164,5 +162,4 @@
 		</g>
 	</g>
 </g>
-</svg>
 </svg>

@@ -298,39 +298,28 @@
   }
 
   .site-brand {
-    min-width: 21rem;
+    min-width: 25rem;
     display: flex;
     align-items: center;
-    gap: 0.85rem;
     color: var(--ink);
     text-decoration: none;
   }
 
-  .site-brand img {
-    width: 3.2rem;
-    height: 3.2rem;
+  .site-brand-logo {
+    width: clamp(8.3rem, 9.5vw, 9.15rem);
+    height: auto;
     flex: 0 0 auto;
   }
 
-  .site-brand strong,
-  .site-brand small {
-    display: block;
-  }
-
   .site-brand strong {
-    font-family: var(--font-serif);
-    font-size: 1.08rem;
-    line-height: 1.05;
-  }
-
-  .site-brand small {
-    margin-top: 0.22rem;
-    color: var(--primary);
-    font-size: 0.69rem;
-    font-weight: 750;
-    letter-spacing: 0.15em;
-    line-height: 1.15;
-    text-transform: uppercase;
+    display: grid;
+    gap: 0.05rem;
+    margin-left: 0.75rem;
+    font-family: var(--font-sans);
+    font-size: 0.91rem;
+    font-weight: 560;
+    line-height: 1.08;
+    white-space: nowrap;
   }
 
   .primary-nav {
@@ -1771,20 +1760,16 @@
 
     .site-brand {
       min-width: 0;
-      gap: 0.65rem;
     }
 
-    .site-brand img {
-      width: 2.7rem;
-      height: 2.7rem;
+    .site-brand-logo {
+      width: clamp(5.8rem, 26vw, 6.9rem);
     }
 
     .site-brand strong {
-      font-size: 1rem;
-    }
-
-    .site-brand small {
-      font-size: 0.58rem;
+      margin-left: 0.45rem;
+      font-size: 0.62rem;
+      white-space: nowrap;
     }
 
     .menu-toggle {
@@ -1960,6 +1945,12 @@
 
     .aim-card li {
       color: var(--primary);
+    }
+
+    .site-brand-logo {
+      box-sizing: content-box;
+      padding: 0.2rem 0.3rem;
+      background: #fff;
     }
 
     .hero-map-outcome,

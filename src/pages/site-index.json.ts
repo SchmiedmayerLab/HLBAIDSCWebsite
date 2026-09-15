@@ -24,15 +24,13 @@ export const GET: APIRoute = () => {
       type: 'WebPage',
       id: absoluteUrl('/participate/'),
       title: 'Participate',
-      description:
-        'Find official funding calls, contact the center about collaboration, or explore future team opportunities.',
+      description: `Find official funding calls, contact the ${siteConfig.name} about collaboration, or explore future team opportunities.`,
     },
     {
       type: 'WebPage',
       id: absoluteUrl('/work-with-us/'),
       title: 'Work with us',
-      description:
-        'Express interest in future postdoctoral-level research or research software engineering opportunities advancing agentic AI with the center.',
+      description: `Express interest in future postdoctoral-level research or research software engineering opportunities advancing agentic AI with the ${siteConfig.name}.`,
     },
     ...aims.map((aim) => ({
       type: 'ResearchProject',

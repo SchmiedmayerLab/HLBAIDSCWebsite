@@ -1,5 +1,5 @@
 version = 1
-SPDX-PackageName = "NHLBI-AI Stanford Data Science Center website"
+SPDX-PackageName = "Heart, Lung, and Blood AI Data Science Center website"
 SPDX-PackageSupplier = "NOASSERTION"
 SPDX-PackageDownloadLocation = "NOASSERTION"
 
@@ -71,3 +71,16 @@ path = ["public/people/**/*.jpg"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "Stanford University and respective photographers"
 SPDX-License-Identifier = "LicenseRef-AllRightsReserved"
+
+[[annotations]]
+path = [
+  "public/apple-touch-icon.png",
+  "public/favicon-32x32.png",
+  "public/favicon.svg",
+  "public/brand/*.png",
+  "public/brand/*.svg",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Stanford University"
+SPDX-License-Identifier = "LicenseRef-AllRightsReserved"
+SPDX-FileComment = "Includes official Stanford Medicine artwork from the Stanford Medicine Identity Guide."

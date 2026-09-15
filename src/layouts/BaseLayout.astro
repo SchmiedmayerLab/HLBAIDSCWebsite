@@ -70,9 +70,9 @@ const serializedJsonLd = JSON.stringify(jsonLd)
     <meta name="color-scheme" content="light dark" />
     <meta
       name="robots"
-      content={shouldNoindex
-        ? 'noindex, follow'
-        : 'index, follow, max-image-preview:large, max-snippet:-1'}
+      content={
+        shouldNoindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'
+      }
     />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" type="text/markdown" href={absoluteUrl('/llms.txt')} />
@@ -104,22 +104,20 @@ const serializedJsonLd = JSON.stringify(jsonLd)
     <meta property="og:site_name" content={siteConfig.name} />
     <meta property="og:locale" content={siteConfig.institution.openGraphLocale} />
     {socialImage && <meta property="og:image" content={socialImage} />}
-    {
-      socialImage && (
-        <meta property="og:image:alt" content={siteConfig.discovery.defaultSocialImageAlt} />
-      )
-    }
+    {socialImage && (
+      <meta property="og:image:alt" content={siteConfig.discovery.defaultSocialImageAlt} />
+    )}
     <meta name="twitter:card" content={socialImage ? 'summary_large_image' : 'summary'} />
     {socialImage && <meta name="twitter:image" content={socialImage} />}
-    {
-      socialImage && (
-        <meta name="twitter:image:alt" content={siteConfig.discovery.defaultSocialImageAlt} />
-      )
-    }
-    <script is:inline type="application/ld+json" set:html={serializedJsonLd} />
+    {socialImage && (
+      <meta name="twitter:image:alt" content={siteConfig.discovery.defaultSocialImageAlt} />
+    )}
+    <script is:inline type="application/ld+json" set:html={serializedJsonLd}></script>
   </head>
   <body>
-    <a class="skip-link" href="#main-content" data-skip-link>Skip to main content</a>
+    <a class="skip-link" href="#main-content" data-skip-link>
+      Skip to main content
+    </a>
     <SiteHeader />
     <main id="main-content" tabindex="-1">
       <slot />

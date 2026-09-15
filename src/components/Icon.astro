@@ -76,5 +76,7 @@ const paths = iconPaths[name] ?? iconPaths.model;
   role={label ? 'img' : undefined}
 >
   {label && <title>{label}</title>}
-  {paths.map((path) => <path d={path} />)}
+  {paths.map((path) => (
+    <path d={path} />
+  ))}
 </svg>

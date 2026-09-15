@@ -11,10 +11,10 @@ const careerInterestFormUrl =
 const contactEmail = process.env.CENTER_CONTACT_EMAIL ?? 'departmentchair@stanford.edu';
 
 export const siteConfig = {
-  name: 'NHLBI-AI Stanford Data Science Center',
-  shortName: 'NHLBI-AI Stanford DSC',
+  name: 'Heart, Lung, and Blood AI Data Science Center',
+  shortName: 'Heart, Lung, and Blood AI DSC',
   description:
-    'The NHLBI-AI Stanford Data Science Center advances safe agentic AI, multimodal models, and reproducible research across large-scale biomedical data.',
+    'The Heart, Lung, and Blood AI Data Science Center advances safe agentic AI, multimodal models, and reproducible research across large-scale biomedical data.',
   tagline: 'Agentic AI for biomedical discovery.',
   url: deploymentUrl,
   base: deploymentBase,
@@ -83,7 +83,7 @@ export const siteConfig = {
     aiTraining: false,
     defaultSocialImage: '/brand/social-preview.png',
     defaultSocialImageAlt:
-      'NHLBI-AI Stanford Data Science Center: agentic AI for biomedical discovery.',
+      'Heart, Lung, and Blood AI Data Science Center: agentic AI for biomedical discovery.',
     favicon: '/favicon.svg',
     faviconPng: '/favicon-32x32.png',
     appleTouchIcon: '/apple-touch-icon.png',
