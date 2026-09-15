@@ -140,13 +140,13 @@ jobs:
         env:
           SITE_PORTABILITY_CHECK: '1'
           SITE_URL: https://example.github.io
-          SITE_BASE: /NHLBIAIDSCWebsite
+          SITE_BASE: /HLBAIDSCWebsite
       - name: Audit project-path routes, links, fragments, assets, and metadata
         run: npm run test:site
         env:
           SITE_PORTABILITY_CHECK: '1'
           SITE_URL: https://example.github.io
-          SITE_BASE: /NHLBIAIDSCWebsite
+          SITE_BASE: /HLBAIDSCWebsite
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
       - name: Exercise project-path routes in a browser
@@ -154,7 +154,7 @@ jobs:
         env:
           SITE_PORTABILITY_CHECK: '1'
           SITE_URL: https://example.github.io
-          SITE_BASE: /NHLBIAIDSCWebsite
+          SITE_BASE: /HLBAIDSCWebsite
 
   browser:
     name: Browser and accessibility tests

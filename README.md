@@ -10,10 +10,10 @@ SPDX-License-Identifier: MIT
 
 # Heart, Lung, and Blood AI Data Science Center Website
 
-[![Build and Test](https://github.com/SchmiedmayerLab/NHLBIAIDSCWebsite/actions/workflows/check.yml/badge.svg)](https://github.com/SchmiedmayerLab/NHLBIAIDSCWebsite/actions/workflows/check.yml)
-[![Deployment](https://github.com/SchmiedmayerLab/NHLBIAIDSCWebsite/actions/workflows/pages.yml/badge.svg)](https://github.com/SchmiedmayerLab/NHLBIAIDSCWebsite/actions/workflows/pages.yml)
-[![CodeQL](https://github.com/SchmiedmayerLab/NHLBIAIDSCWebsite/actions/workflows/codeql.yml/badge.svg)](https://github.com/SchmiedmayerLab/NHLBIAIDSCWebsite/actions/workflows/codeql.yml)
-[![REUSE status](https://api.reuse.software/badge/github.com/SchmiedmayerLab/NHLBIAIDSCWebsite)](https://api.reuse.software/info/github.com/SchmiedmayerLab/NHLBIAIDSCWebsite)
+[![Build and Test](https://github.com/SchmiedmayerLab/HLBAIDSCWebsite/actions/workflows/check.yml/badge.svg)](https://github.com/SchmiedmayerLab/HLBAIDSCWebsite/actions/workflows/check.yml)
+[![Deployment](https://github.com/SchmiedmayerLab/HLBAIDSCWebsite/actions/workflows/pages.yml/badge.svg)](https://github.com/SchmiedmayerLab/HLBAIDSCWebsite/actions/workflows/pages.yml)
+[![CodeQL](https://github.com/SchmiedmayerLab/HLBAIDSCWebsite/actions/workflows/codeql.yml/badge.svg)](https://github.com/SchmiedmayerLab/HLBAIDSCWebsite/actions/workflows/codeql.yml)
+[![REUSE status](https://api.reuse.software/badge/github.com/SchmiedmayerLab/HLBAIDSCWebsite)](https://api.reuse.software/info/github.com/SchmiedmayerLab/HLBAIDSCWebsite)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 
 ![Heart, Lung, and Blood AI Data Science Center](public/brand/bluesky-banner.png)
