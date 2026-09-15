@@ -1,5 +1,5 @@
 {
-  "name": "nhlbi-ai-stanford-dsc-website",
+  "name": "heart-lung-blood-ai-data-science-center-website",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
@@ -26,7 +26,7 @@
     "test:e2e": "playwright test",
     "test": "npm run test:unit && npm run build && npm run test:site",
     "validate": "npm run format:check && npm run lint && npm run check && npm run test:md-links && npm run test:coverage && npm run build && npm run test:site",
-    "test:portability": "SITE_URL=https://example.github.io SITE_BASE=/NHLBIAIDSCWebsite npm run build && SITE_URL=https://example.github.io SITE_BASE=/NHLBIAIDSCWebsite npm run test:site",
+    "test:portability": "SITE_URL=https://example.github.io SITE_BASE=/HLBAIDSCWebsite npm run build && SITE_URL=https://example.github.io SITE_BASE=/HLBAIDSCWebsite npm run test:site",
     "validate:all": "npm run validate && npm run test:e2e && npm run test:portability",
     "ci": "npm run validate"
   },
