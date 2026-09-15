@@ -1,5 +1,5 @@
 #
-# This source file is part of the NHLBI-AI Stanford Data Science Center Website open-source project
+# This source file is part of the Heart, Lung, and Blood AI Data Science Center website
 #
 # SPDX-FileCopyrightText: 2026 Schmiedmayer Lab and the project authors (see CONTRIBUTORS.md)
 #
@@ -16,6 +16,10 @@ updates:
     directory: /
     patterns: ['*']
     multi-ecosystem-group: weekly-dependencies
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+      exclude: ['SchmiedmayerLab/*']
     ignore:
       # TypeScript-ESLint 8 currently requires TypeScript < 6.1.
       - dependency-name: typescript
@@ -24,3 +28,6 @@ updates:
     directory: /
     patterns: ['*']
     multi-ecosystem-group: weekly-dependencies
+    cooldown:
+      default-days: 7
+      exclude: ['SchmiedmayerLab/*']

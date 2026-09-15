@@ -1,5 +1,5 @@
 #
-# This source file is part of the NHLBI-AI Stanford Data Science Center Website open-source project
+# This source file is part of the Heart, Lung, and Blood AI Data Science Center Website open-source project
 #
 # SPDX-FileCopyrightText: 2026 Schmiedmayer Lab and the project authors (see CONTRIBUTORS.md)
 #
@@ -13,7 +13,7 @@ authors:
   - family-names: 'Schmiedmayer'
     given-names: 'Paul'
     orcid: 'https://orcid.org/0000-0002-8607-9148'
-title: 'NHLBI-AI Stanford Data Science Center Website'
+title: 'Heart, Lung, and Blood AI Data Science Center Website'
 license: MIT
 url: 'https://github.com/SchmiedmayerLab/NHLBIAIDSCWebsite'
 repository-code: 'https://github.com/SchmiedmayerLab/NHLBIAIDSCWebsite'

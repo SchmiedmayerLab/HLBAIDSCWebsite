@@ -23,23 +23,45 @@ describe('social brand assets', () => {
 
     expect(svg).toContain(`width="${asset.width}"`);
     expect(svg).toContain(`height="${asset.height}"`);
-    expect(svg).toContain('NHLBI-AI Stanford Data Science Center');
+    expect(svg).toContain('Heart, Lung, and Blood AI Data Science Center');
     expect(png.subarray(1, 4).toString('ascii')).toBe('PNG');
     expect(png.readUInt32BE(16)).toBe(asset.width);
     expect(png.readUInt32BE(20)).toBe(asset.height);
   });
 });
 
+describe('brand lockups', () => {
+  it.each(['lockup.svg', 'lockup-dark.svg'])('keeps balanced outer whitespace in %s', (name) => {
+    const lockup = readFileSync(join(brandDirectory, name), 'utf8');
+
+    expect(lockup).toContain('width="586"');
+    expect(lockup).toContain('height="120"');
+    expect(lockup).toContain('<svg x="22" y="24"');
+    expect(lockup).toContain('<text class="sans" x="289"');
+  });
+});
+
 describe('browser identity assets', () => {
   it('provides the SVG favicon and web app manifest', () => {
     const favicon = readFileSync(join(process.cwd(), 'public', 'favicon.svg'), 'utf8');
+    const stanfordMedicineLogo = readFileSync(
+      join(brandDirectory, 'stanford-medicine-center-lockup.svg'),
+      'utf8',
+    );
+    const stanfordMedicineWhiteLogo = readFileSync(
+      join(brandDirectory, 'stanford-medicine-center-lockup-white.svg'),
+      'utf8',
+    );
     const manifest = JSON.parse(
       readFileSync(join(process.cwd(), 'public', 'site.webmanifest'), 'utf8'),
     ) as { name: string; icons: Array<{ src: string; sizes: string; type: string }> };
 
     expect(favicon).toContain('<svg');
     expect(favicon).toContain('viewBox="0 0 64 64"');
-    expect(manifest.name).toBe('NHLBI-AI Stanford Data Science Center');
+    expect(stanfordMedicineLogo).toContain('viewBox="18 18 152 44"');
+    expect(stanfordMedicineWhiteLogo).toContain('viewBox="18 18 152 44"');
+    expect(stanfordMedicineWhiteLogo).toContain('.st0{fill:#FFFFFF;}');
+    expect(manifest.name).toBe('Heart, Lung, and Blood AI Data Science Center');
     expect(manifest.icons).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml' }),

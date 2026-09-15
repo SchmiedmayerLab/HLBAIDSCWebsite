@@ -1,6 +1,6 @@
 {
-  "name": "NHLBI-AI Stanford Data Science Center",
-  "short_name": "NHLBI-AI Stanford DSC",
+  "name": "Heart, Lung, and Blood AI Data Science Center",
+  "short_name": "Heart, Lung, and Blood AI DSC",
   "description": "Agentic AI for biomedical discovery.",
   "start_url": ".",
   "scope": ".",

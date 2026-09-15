@@ -1,6 +1,6 @@
 <!--
 
-This source file is part of the NHLBI-AI Stanford Data Science Center Website open-source project
+This source file is part of the Heart, Lung, and Blood AI Data Science Center Website open-source project
 
 SPDX-FileCopyrightText: 2026 Schmiedmayer Lab and the project authors (see CONTRIBUTORS.md)
 
@@ -8,7 +8,7 @@ SPDX-License-Identifier: MIT
 
 -->
 
-# NHLBI-AI Stanford Data Science Center Website
+# Heart, Lung, and Blood AI Data Science Center Website
 
 [![Build and Test](https://github.com/SchmiedmayerLab/NHLBIAIDSCWebsite/actions/workflows/check.yml/badge.svg)](https://github.com/SchmiedmayerLab/NHLBIAIDSCWebsite/actions/workflows/check.yml)
 [![Deployment](https://github.com/SchmiedmayerLab/NHLBIAIDSCWebsite/actions/workflows/pages.yml/badge.svg)](https://github.com/SchmiedmayerLab/NHLBIAIDSCWebsite/actions/workflows/pages.yml)
@@ -16,9 +16,9 @@ SPDX-License-Identifier: MIT
 [![REUSE status](https://api.reuse.software/badge/github.com/SchmiedmayerLab/NHLBIAIDSCWebsite)](https://api.reuse.software/info/github.com/SchmiedmayerLab/NHLBIAIDSCWebsite)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 
-![NHLBI-AI Stanford Data Science Center](public/brand/bluesky-banner.png)
+![Heart, Lung, and Blood AI Data Science Center](public/brand/bluesky-banner.png)
 
-The public website for the NHLBI-AI Stanford Data Science Center: a service and community hub
+The public website for the Heart, Lung, and Blood AI Data Science Center: a service and community hub
 advancing safe agentic AI, multimodal models, and reproducible research workflows across
 NHLBI-supported biomedical data and secure research environments.
 

@@ -100,6 +100,25 @@ test('sticky header material preserves hero content clearance', async ({ page })
     .toBeLessThan(2);
 });
 
+test('header uses the Stanford Medicine lockup and full center name', async ({ page }) => {
+  await page.goto(route('/'));
+  const brand = page.getByRole('link', {
+    name: 'Heart, Lung, and Blood AI Data Science Center home',
+  });
+
+  await expect(brand.locator('strong > span')).toHaveText([
+    'Heart, Lung, and Blood',
+    'AI Data Science Center',
+  ]);
+  await expect(brand.locator('.site-brand-logo')).toHaveAttribute(
+    'src',
+    /brand\/stanford-medicine-center-lockup\.svg$/,
+  );
+  await expect(page.locator('.hero .eyebrow')).toHaveText(
+    'Heart, Lung, and Blood AI Data Science Center',
+  );
+});
+
 test('the three center capabilities and leadership are present', async ({ page }) => {
   await page.goto(route('/'));
   await expect(page.locator('.aim-card')).toHaveCount(3);
@@ -285,7 +304,7 @@ test('keyboard users can reach the main content and primary navigation', async (
 
 test('participation page provides a form or an accessible contact fallback', async ({ page }) => {
   await page.goto(route('/participate/'));
-  const form = page.getByTitle('NHLBI-AI Stanford Data Science Center engagement form');
+  const form = page.getByTitle('Heart, Lung, and Blood AI Data Science Center engagement form');
   const fallback = page.getByRole('link', {
     name: /Contact the center leadership|Email the center/,
   });
@@ -337,7 +356,9 @@ test('future team interest does not imply an advertised vacancy', async ({ page 
     'href',
     'https://careersearch.stanford.edu/',
   );
-  const form = page.getByTitle('NHLBI-AI Stanford Data Science Center future opportunities form');
+  const form = page.getByTitle(
+    'Heart, Lung, and Blood AI Data Science Center future opportunities form',
+  );
   await expect(form).toBeVisible();
 
   await page.goto(route('/'));

@@ -27,64 +27,56 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood');
       <p class="pathway-kicker">NHLBI foundation</p>
       <h4 id="pathway-input-title">Studies and data programs</h4>
       <ul class="pathway-resource-list">
-        {
-          nhlbiDataPrograms.map((resource) => (
-            <li>
-              <a href={resource.url}>
-                {resource.name}
-                <span aria-hidden="true">↗</span>
-              </a>
-            </li>
-          ))
-        }
+        {nhlbiDataPrograms.map((resource) => (
+          <li>
+            <a href={resource.url}>
+              {resource.name}
+              <span aria-hidden="true">↗</span>
+            </a>
+          </li>
+        ))}
       </ul>
       <div class="pathway-access" aria-label="Data access and analysis path">
         <p>Access and analysis</p>
-        {
-          nhlbiDataAccess.map((resource, index) => (
-            <>
-              {index > 0 && <span aria-hidden="true">→</span>}
-              <a href={resource.url}>{resource.name}</a>
-            </>
-          ))
-        }
+        {nhlbiDataAccess.map((resource, index) => (
+          <>
+            {index > 0 && <span aria-hidden="true">→</span>}
+            <a href={resource.url}>{resource.name}</a>
+          </>
+        ))}
       </div>
     </section>
 
-    <div class="pathway-connector" aria-hidden="true"><span>Connect</span></div>
+    <div class="pathway-connector" aria-hidden="true">
+      <span>Connect</span>
+    </div>
 
     <section class="pathway-stage pathway-center" aria-labelledby="pathway-center-title">
       <p class="pathway-kicker">Center capabilities</p>
       <h4 id="pathway-center-title">Safe AI research at scale</h4>
       <ul class="pathway-capability-list">
-        {
-          aims.map((aim) => (
-            <li>
-              <Icon name={aim.icon} />
-              <strong>{aim.shortTitle}</strong>
-            </li>
-          ))
-        }
+        {aims.map((aim) => (
+          <li>
+            <Icon name={aim.icon} />
+            <strong>{aim.shortTitle}</strong>
+          </li>
+        ))}
       </ul>
       <div class="pathway-platforms">
         <p>BioData Catalyst workspaces</p>
         <div>
-          {
-            biodataCatalystWorkspaces.map((workspace) => (
-              <a href={workspace.url}>
-                {workspace.name}
-                <span aria-hidden="true">↗</span>
-              </a>
-            ))
-          }
-          {
-            heartwood && (
-              <a href={heartwood.url}>
-                {heartwood.name}
-                <span aria-hidden="true">↗</span>
-              </a>
-            )
-          }
+          {biodataCatalystWorkspaces.map((workspace) => (
+            <a href={workspace.url}>
+              {workspace.name}
+              <span aria-hidden="true">↗</span>
+            </a>
+          ))}
+          {heartwood && (
+            <a href={heartwood.url}>
+              {heartwood.name}
+              <span aria-hidden="true">↗</span>
+            </a>
+          )}
         </div>
         <small>
           Terra and Seven Bridges provide workspaces. Heartwood adds auditable agentic tooling
@@ -92,11 +84,15 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood');
         </small>
       </div>
       <p class="pathway-guardrails">
-        <span>Human oversight</span><span>Safety + ELSI</span><span>Provenance</span>
+        <span>Human oversight</span>
+        <span>Safety + ELSI</span>
+        <span>Provenance</span>
       </p>
     </section>
 
-    <div class="pathway-connector" aria-hidden="true"><span>Deliver</span></div>
+    <div class="pathway-connector" aria-hidden="true">
+      <span>Deliver</span>
+    </div>
 
     <section class="pathway-stage pathway-output" aria-labelledby="pathway-output-title">
       <p class="pathway-kicker">Shared value</p>

@@ -11,7 +11,7 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood');
 <BaseLayout
   title="Work with us"
   canonicalPath="/work-with-us/"
-  description="Express interest in future research and software engineering opportunities advancing agentic AI at the NHLBI-AI Stanford Data Science Center."
+  description="Express interest in future research and software engineering opportunities advancing agentic AI at the Heart, Lung, and Blood AI Data Science Center."
 >
   <section class="page-hero work-hero">
     <div class="shell page-hero-grid">
@@ -20,9 +20,9 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood');
         <h1>Build agentic AI for biomedical discovery.</h1>
       </div>
       <p class="lead">
-        We are preparing to expand the center and are gauging interest from researchers who want to
-        advance safe agentic systems and engineers who want to turn those ideas into reliable,
-        reusable tools.
+        The {siteConfig.name} is preparing to expand and is gauging interest from researchers who
+        want to advance safe agentic systems and engineers who want to turn those ideas into
+        reliable, reusable tools.
       </p>
     </div>
   </section>
@@ -57,14 +57,12 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood');
           harnesses, and cloud workflows that move research prototypes into dependable shared
           systems.
         </p>
-        {
-          heartwood && (
-            <p class="opportunity-example">
-              <a href={heartwood.url}>{heartwood.name} ↗</a> is an early example of the auditable,
-              researcher-facing agentic tooling we aim to advance through the center.
-            </p>
-          )
-        }
+        {heartwood && (
+          <p class="opportunity-example">
+            <a href={heartwood.url}>{heartwood.name} ↗</a> is an early example of the auditable,
+            researcher-facing agentic tooling we aim to advance through the center.
+          </p>
+        )}
       </article>
     </div>
 
@@ -79,9 +77,9 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood');
           application or guarantee follow-up. Any formally advertised Stanford position will have
           its own requirements and must be applied to through the official Stanford Careers system.
         </p>
-        <a class="button button-secondary" href={siteConfig.careerInterest.stanfordCareersUrl}
-          >Search Stanford Careers ↗</a
-        >
+        <a class="button button-secondary" href={siteConfig.careerInterest.stanfordCareersUrl}>
+          Search Stanford Careers ↗
+        </a>
       </div>
     </aside>
   </section>
@@ -92,7 +90,7 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood');
     heading="Share your background."
     description="Tell us which areas interest you, what you hope to contribute, and where we can learn more about your work. You may share public links to your GitHub profile, LinkedIn profile, personal website, or CV or résumé."
     formUrl={siteConfig.careerInterest.formUrl}
-    frameTitle="NHLBI-AI Stanford Data Science Center future opportunities form"
+    frameTitle="Heart, Lung, and Blood AI Data Science Center future opportunities form"
     privacyNote="Share only professional information relevant to your interest. Do not include health information, sensitive identifiers, references' private contact details, or confidential research material."
     formHeight={2260}
     formMobileHeight={2720}

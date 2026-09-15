@@ -18,9 +18,8 @@ import { siteConfig } from '../../site.config.mjs';
 const centerStructuredData = {
   '@type': 'ResearchProject',
   '@id': `${absoluteUrl('/')}#center-program`,
-  name: 'NHLBI-AI Stanford Data Science Center',
-  description:
-    'A Stanford center advancing safe agentic AI, multimodal models, and reproducible research across NHLBI-supported biomedical data.',
+  name: siteConfig.name,
+  description: `${siteConfig.name} advances safe agentic AI, multimodal models, and reproducible research across NHLBI-supported biomedical data.`,
   url: absoluteUrl('/'),
   keywords: [
     'NHLBI',
@@ -68,12 +67,7 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood')!;
   <section class="hero">
     <div class="shell hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">
-          <a class="initiative-link" href={siteConfig.initiative.url}
-            >NHLBI Artificial Intelligence Initiative</a
-          >
-          <span aria-hidden="true"> · </span>Stanford University
-        </p>
+        <p class="eyebrow">{siteConfig.name}</p>
         <h1>Agentic AI for biomedical discovery.</h1>
         <p class="hero-summary">
           We are building safe, reproducible systems that connect large-scale heart, lung, blood,
@@ -81,16 +75,21 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood')!;
           questions to validated evidence.
         </p>
         <div class="hero-actions">
-          <a class="button" href="#capabilities">Explore center capabilities</a>
-          <a class="button button-secondary" href={withBase('/participate/')}>Get involved</a>
+          <a class="button" href="#capabilities">
+            Explore center capabilities
+          </a>
+          <a class="button button-secondary" href={withBase('/participate/')}>
+            Get involved
+          </a>
         </div>
         <p class="hero-context">
-          Built around <a
-            href="https://www.nhlbi.nih.gov/science/trans-omics-precision-medicine-topmed-program"
-            >TOPMed</a
-          > and other NHLBI-supported data · Extending <a
-            href="https://biodatacatalyst.nhlbi.nih.gov/">BioData Catalyst</a
-          > with safe, portable AI workflows
+          Built around{' '}
+          <a href="https://www.nhlbi.nih.gov/science/trans-omics-precision-medicine-topmed-program">
+            TOPMed
+          </a>{' '}
+          and other NHLBI-supported data · Extending{' '}
+          <a href="https://biodatacatalyst.nhlbi.nih.gov/">BioData Catalyst</a> with safe, portable
+          AI workflows
         </p>
       </div>
 
@@ -102,9 +101,18 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood')!;
         </div>
         <div class="hero-map-line" aria-hidden="true"></div>
         <div class="hero-map-capabilities">
-          <div><Icon name="secure" /><strong>Secure compute</strong></div>
-          <div><Icon name="multimodal" /><strong>Multimodal AI</strong></div>
-          <div><Icon name="agent" /><strong>Research agents</strong></div>
+          <div>
+            <Icon name="secure" />
+            <strong>Secure compute</strong>
+          </div>
+          <div>
+            <Icon name="multimodal" />
+            <strong>Multimodal AI</strong>
+          </div>
+          <div>
+            <Icon name="agent" />
+            <strong>Research agents</strong>
+          </div>
         </div>
         <div class="hero-map-line" aria-hidden="true"></div>
         <div class="hero-map-node hero-map-outcome">
@@ -124,56 +132,64 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood')!;
       </div>
       <div class="prose-stack">
         <p class="lead">
-          The <a href={siteConfig.initiative.url}>{siteConfig.initiative.name}</a> brings AI and data
-          science experts together with heart, lung, blood, and sleep researchers. Stanford's Data Science
-          Center contributes secure infrastructure, reusable AI tools, multidisciplinary training, and
-          scientific partnerships to that shared effort.
+          The{' '}
+          <a class="initiative-link" href={siteConfig.initiative.url}>
+            {siteConfig.initiative.name}
+          </a>{' '}
+          brings AI and data science experts together with heart, lung, blood, and sleep
+          researchers. The {siteConfig.name} contributes secure infrastructure, reusable AI tools,
+          multidisciplinary training, and scientific partnerships to that shared effort.
         </p>
         <p>
-          Data programs such as <a
-            href="https://www.nhlbi.nih.gov/science/trans-omics-precision-medicine-topmed-program"
-            >TOPMed</a
-          > connect genomic and other omic data with imaging, environmental, and clinical data from parent
-          studies such as <a
-            href="https://www.nhlbi.nih.gov/science/multi-ethnic-study-atherosclerosis-mesa">MESA</a
-          >. Programs including <a
-            href="https://www.nhlbi.nih.gov/news/2022/accelerating-heart-failure-research"
-            >HeartShare</a
-          > and <a
-            href="https://www.nhlbi.nih.gov/science/accelerating-medicines-partnership-heart-failure-program-amp-hf"
-            >AMP Heart Failure</a
-          > extend this foundation with deeply characterized, multimodal data.
+          Data programs such as{' '}
+          <a href="https://www.nhlbi.nih.gov/science/trans-omics-precision-medicine-topmed-program">
+            TOPMed
+          </a>{' '}
+          connect genomic and other omic data with imaging, environmental, and clinical data from
+          parent studies such as{' '}
+          <a href="https://www.nhlbi.nih.gov/science/multi-ethnic-study-atherosclerosis-mesa">
+            MESA
+          </a>
+          . Programs including{' '}
+          <a href="https://www.nhlbi.nih.gov/news/2022/accelerating-heart-failure-research">
+            HeartShare
+          </a>{' '}
+          and{' '}
+          <a href="https://www.nhlbi.nih.gov/science/accelerating-medicines-partnership-heart-failure-program-amp-hf">
+            AMP Heart Failure
+          </a>{' '}
+          extend this foundation with deeply characterized, multimodal data.
         </p>
         <p>
-          For controlled genomic data, researchers request access through <a
-            href="https://www.ncbi.nlm.nih.gov/gap/">dbGaP</a
-          >. <a href="https://biodatacatalyst.nhlbi.nih.gov/">BioData Catalyst</a> then brings approved
-          NHLBI data, tools, and secure cloud workspaces together. The center will build on that ecosystem
-          with guarded agents and multimodal AI that automate reproducible research workflows while preserving
-          human oversight and scientific accountability.
+          For controlled genomic data, researchers request access through{' '}
+          <a href="https://www.ncbi.nlm.nih.gov/gap/">dbGaP</a>.{' '}
+          <a href="https://biodatacatalyst.nhlbi.nih.gov/">BioData Catalyst</a> then brings approved
+          NHLBI data, tools, and secure cloud workspaces together. The center will build on that
+          ecosystem with guarded agents and multimodal AI that automate reproducible research
+          workflows while preserving human oversight and scientific accountability.
         </p>
       </div>
     </div>
     <div class="shell principles" aria-label="Center design principles">
       <article>
-        <Icon name="safety" /><strong>Safe for protected research</strong><p>
-          Data controls, human oversight, provenance, and clear boundaries for agent actions.
-        </p>
+        <Icon name="safety" />
+        <strong>Safe for protected research</strong>
+        <p>Data controls, human oversight, provenance, and clear boundaries for agent actions.</p>
       </article>
       <article>
-        <Icon name="reproducible" /><strong>Reproducible in practice</strong><p>
-          Versioned environments and complete records of data, code, parameters, and outputs.
-        </p>
+        <Icon name="reproducible" />
+        <strong>Reproducible in practice</strong>
+        <p>Versioned environments and complete records of data, code, parameters, and outputs.</p>
       </article>
       <article>
-        <Icon name="portable" /><strong>Portable across platforms</strong><p>
-          Tools and containers designed to work across approved research environments.
-        </p>
+        <Icon name="portable" />
+        <strong>Portable across platforms</strong>
+        <p>Tools and containers designed to work across approved research environments.</p>
       </article>
       <article>
-        <Icon name="community" /><strong>Shared with the community</strong><p>
-          Validated models, workflows, benchmarks, training, and practical support.
-        </p>
+        <Icon name="community" />
+        <strong>Shared with the community</strong>
+        <p>Validated models, workflows, benchmarks, training, and practical support.</p>
       </article>
     </div>
   </section>
@@ -194,34 +210,32 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood')!;
     </div>
 
     <div class="shell aim-grid">
-      {
-        aims.map((aim) => (
-          <article class="aim-card" id={`aim-${aim.id}`}>
-            <div class="aim-card-head">
-              <Icon name={aim.icon} />
-              <p>{aim.shortTitle}</p>
-            </div>
-            <h3>{aim.title}</h3>
-            {aim.relatedToolId === heartwood?.id ? (
-              <p>
-                {aim.summary}{' '}
-                <a class="inline-tool-link" href={heartwood.url}>
-                  {heartwood.name} ↗
-                </a>{' '}
-                is the open-source, auditable coding agent that provides an early foundation for
-                this work.
-              </p>
-            ) : (
-              <p>{aim.summary}</p>
-            )}
-            <ul aria-label={`Expected outputs for ${aim.title}`}>
-              {aim.deliverables.map((deliverable) => (
-                <li>{deliverable}</li>
-              ))}
-            </ul>
-          </article>
-        ))
-      }
+      {aims.map((aim) => (
+        <article class="aim-card" id={`aim-${aim.id}`}>
+          <div class="aim-card-head">
+            <Icon name={aim.icon} />
+            <p>{aim.shortTitle}</p>
+          </div>
+          <h3>{aim.title}</h3>
+          {aim.relatedToolId === heartwood?.id ? (
+            <p>
+              {aim.summary}{' '}
+              <a class="inline-tool-link" href={heartwood.url}>
+                {heartwood.name} ↗
+              </a>{' '}
+              is the open-source, auditable coding agent that provides an early foundation for this
+              work.
+            </p>
+          ) : (
+            <p>{aim.summary}</p>
+          )}
+          <ul aria-label={`Expected outputs for ${aim.title}`}>
+            {aim.deliverables.map((deliverable) => (
+              <li>{deliverable}</li>
+            ))}
+          </ul>
+        </article>
+      ))}
     </div>
   </section>
 
@@ -237,15 +251,13 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood')!;
       </p>
     </div>
     <div class="shell outcome-grid">
-      {
-        researcherServices.map((service, index) => (
-          <article id={`service-${index + 1}`}>
-            <Icon name={service.icon} />
-            <h3>{service.title}</h3>
-            <p>{service.summary}</p>
-          </article>
-        ))
-      }
+      {researcherServices.map((service, index) => (
+        <article id={`service-${index + 1}`}>
+          <Icon name={service.icon} />
+          <h3>{service.title}</h3>
+          <p>{service.summary}</p>
+        </article>
+      ))}
     </div>
   </section>
 
@@ -259,27 +271,28 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood')!;
           validated resources. Working groups connect technical development with domain expertise,
           participant perspectives, and responsible governance.
         </p>
-        <a class="button button-light" href={withBase('/participate/')}>Work with the center</a>
+        <a class="button button-light" href={withBase('/participate/')}>
+          Work with the center
+        </a>
       </div>
       <div class="governance-model" aria-label="Center governance model">
         <div class="governance-core">
-          <span>Center services</span><strong>Research support and shared infrastructure</strong
-          ><small>Consultation · engineering · evaluation · training</small>
+          <span>Center services</span>
+          <strong>Research support and shared infrastructure</strong>
+          <small>Consultation · engineering · evaluation · training</small>
         </div>
         <div class="working-group-grid">
-          {
-            workingGroups.map((group, index) => (
-              <article id={`working-group-${index + 1}`}>
-                <Icon name={group.icon} />
-                <h3>{group.title}</h3>
-                <p>{group.summary}</p>
-              </article>
-            ))
-          }
+          {workingGroups.map((group, index) => (
+            <article id={`working-group-${index + 1}`}>
+              <Icon name={group.icon} />
+              <h3>{group.title}</h3>
+              <p>{group.summary}</p>
+            </article>
+          ))}
         </div>
         <p class="governance-community">
-          <strong>Open exchange</strong> among investigators, trainees, participants, domain experts,
-          and research infrastructure teams.
+          <strong>Open exchange</strong> among investigators, trainees, participants, domain
+          experts, and research infrastructure teams.
         </p>
       </div>
     </div>
@@ -296,43 +309,41 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood')!;
     </div>
 
     <div class="shell team-list team-grid">
-      {
-        investigators.map((person) => (
-          <article class="person-card" id={person.id}>
-            <div
-              class="person-image-frame"
-              style={`--portrait-position: ${person.portrait.position}; --portrait-scale: ${person.portrait.scale};`}
-            >
-              {person.image ? (
-                <img
-                  class="person-image"
-                  src={withBase(person.image)}
-                  width="480"
-                  height="480"
-                  loading="lazy"
-                  decoding="async"
-                  alt=""
-                />
-              ) : (
-                <span class="person-initials" aria-hidden="true">
-                  {person.initials}
-                </span>
-              )}
-            </div>
-            <div class="person-card-body">
-              <p class="person-role">{person.role}</p>
-              <h3>
-                <a href={person.profileUrl} aria-label={`${person.name}, Stanford profile`}>
-                  {person.name}
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </h3>
-              <span class="person-title">{person.title}</span>
-              <p class="person-focus">{person.focus}</p>
-            </div>
-          </article>
-        ))
-      }
+      {investigators.map((person) => (
+        <article class="person-card" id={person.id}>
+          <div
+            class="person-image-frame"
+            style={`--portrait-position: ${person.portrait.position}; --portrait-scale: ${person.portrait.scale};`}
+          >
+            {person.image ? (
+              <img
+                class="person-image"
+                src={withBase(person.image)}
+                width="480"
+                height="480"
+                loading="lazy"
+                decoding="async"
+                alt=""
+              />
+            ) : (
+              <span class="person-initials" aria-hidden="true">
+                {person.initials}
+              </span>
+            )}
+          </div>
+          <div class="person-card-body">
+            <p class="person-role">{person.role}</p>
+            <h3>
+              <a href={person.profileUrl} aria-label={`${person.name}, Stanford profile`}>
+                {person.name}
+                <span aria-hidden="true">↗</span>
+              </a>
+            </h3>
+            <span class="person-title">{person.title}</span>
+            <p class="person-focus">{person.focus}</p>
+          </div>
+        </article>
+      ))}
     </div>
   </section>
 
@@ -347,12 +358,12 @@ const heartwood = openSourceTools.find((tool) => tool.id === 'heartwood')!;
         </p>
       </div>
       <div class="final-cta-actions">
-        <a class="button button-light" href={withBase('/participate/')}
-          >Explore ways to contribute</a
-        >
-        <a class="final-cta-link" href={withBase('/work-with-us/')}
-          >Interested in joining the team?</a
-        >
+        <a class="button button-light" href={withBase('/participate/')}>
+          Explore ways to contribute
+        </a>
+        <a class="final-cta-link" href={withBase('/work-with-us/')}>
+          Interested in joining the team?
+        </a>
       </div>
     </div>
   </section>

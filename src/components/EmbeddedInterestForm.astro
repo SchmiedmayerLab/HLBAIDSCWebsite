@@ -34,7 +34,10 @@ const frameStyle = `--form-height: ${formHeight}px; --form-height-mobile: ${form
       <p class="form-privacy-note">{privacyNote}</p>
       <p class="form-fallback">
         Prefer a separate window?{' '}
-        <a href={formUrl} target="_blank" rel="noreferrer"> Open the form in a new page ↗ </a>
+        <a href={formUrl} target="_blank" rel="noreferrer">
+          {' '}
+          Open the form in a new page ↗{' '}
+        </a>
       </p>
     </div>
 
@@ -43,7 +46,8 @@ const frameStyle = `--form-height: ${formHeight}px; --form-height-mobile: ${form
         src={formUrl}
         title={frameTitle}
         loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
     </div>
   </div>
 </section>
