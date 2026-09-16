@@ -18,13 +18,19 @@ const isCurrentPage = (href: string) =>
 <header class="site-header">
   <div class="shell masthead">
     <a class="site-brand" href={withBase('/')} aria-label={`${siteConfig.name} home`}>
-      <img
-        class="site-brand-logo"
-        src={withBase('/brand/stanford-medicine-center-lockup.svg')}
-        width="152"
-        height="44"
-        alt=""
-      />
+      <picture class="site-brand-picture">
+        <source
+          media="(prefers-color-scheme: dark)"
+          srcset={withBase('/brand/stanford-medicine-center-lockup-white.svg')}
+        />
+        <img
+          class="site-brand-logo"
+          src={withBase('/brand/stanford-medicine-center-lockup.svg')}
+          width="152"
+          height="44"
+          alt=""
+        />
+      </picture>
       <strong>
         <span>Heart, Lung, and Blood</span>
         <span>AI Data Science Center</span>

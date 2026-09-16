@@ -100,20 +100,41 @@ test('sticky header material preserves hero content clearance', async ({ page })
     .toBeLessThan(2);
 });
 
-test('header uses the Stanford Medicine lockup and full center name', async ({ page }) => {
+test('header uses color-scheme-aware Stanford Medicine lockups and the full center name', async ({
+  page,
+}) => {
+  await page.emulateMedia({ colorScheme: 'light' });
   await page.goto(route('/'));
   const brand = page.getByRole('link', {
     name: 'Heart, Lung, and Blood AI Data Science Center home',
   });
+  const logo = brand.locator('.site-brand-logo');
 
   await expect(brand.locator('strong > span')).toHaveText([
     'Heart, Lung, and Blood',
     'AI Data Science Center',
   ]);
-  await expect(brand.locator('.site-brand-logo')).toHaveAttribute(
-    'src',
-    /brand\/stanford-medicine-center-lockup\.svg$/,
-  );
+  await expect(logo).toHaveAttribute('src', /brand\/stanford-medicine-center-lockup\.svg$/);
+  await expect
+    .poll(() => logo.evaluate((image: HTMLImageElement) => image.currentSrc))
+    .toMatch(/brand\/stanford-medicine-center-lockup\.svg$/);
+
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await expect
+    .poll(() => logo.evaluate((image: HTMLImageElement) => image.currentSrc))
+    .toMatch(/brand\/stanford-medicine-center-lockup-white\.svg$/);
+  await expect
+    .poll(() =>
+      logo.evaluate((image) => {
+        const style = getComputedStyle(image);
+        return {
+          backgroundColor: style.backgroundColor,
+          padding: style.padding,
+        };
+      }),
+    )
+    .toEqual({ backgroundColor: 'rgba(0, 0, 0, 0)', padding: '0px' });
+
   await expect(page.locator('.hero .eyebrow')).toHaveText(
     'Heart, Lung, and Blood AI Data Science Center',
   );

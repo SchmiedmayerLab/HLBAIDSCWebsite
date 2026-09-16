@@ -305,10 +305,14 @@
     text-decoration: none;
   }
 
-  .site-brand-logo {
+  .site-brand-picture {
     width: clamp(8.3rem, 9.5vw, 9.15rem);
-    height: auto;
     flex: 0 0 auto;
+  }
+
+  .site-brand-logo {
+    width: 100%;
+    height: auto;
   }
 
   .site-brand strong {
@@ -1762,7 +1766,7 @@
       min-width: 0;
     }
 
-    .site-brand-logo {
+    .site-brand-picture {
       width: clamp(5.8rem, 26vw, 6.9rem);
     }
 
@@ -1945,12 +1949,6 @@
 
     .aim-card li {
       color: var(--primary);
-    }
-
-    .site-brand-logo {
-      box-sizing: content-box;
-      padding: 0.2rem 0.3rem;
-      background: #fff;
     }
 
     .hero-map-outcome,
